@@ -1,8 +1,10 @@
 @import '_variables';
-.main-list{
+
+.main-list {
   display: flex;
   flex-flow: row wrap;
-  .student{
+
+  .student {
     background-color: $light-gray;
     font-weight: bold;
     padding: 2px;
@@ -11,5 +13,31 @@
     width: 100px;
     height: 30px;
     line-height: 30px;
+  }
+
+  .add-student {
+    border-style: solid;
+    border-color: $gray;
+    border-width: 1px;
+    width: 100px;
+    height: 30px;
+    margin: 5px 10px;
+    text-align: center;
+    padding: 2px;
+    cursor: pointer;
+    line-height: 30px;
+
+    &:hover {
+      border-color: blue;
+    }
+  }
+
+  .add-student-input {
+    width: 100px;
+    height: 25px;
+    margin: 5px 10px;
+    text-align: center;
+    padding: 2px;
+    line-height: 25px;
   }
 }
