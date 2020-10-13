@@ -8,10 +8,11 @@
     "test": "jest",
     "jest:watch": "jest --watch",
     "jest:coverage": "jest --coverage",
-    "format": "prettier --write \"**/*.{js,css,scss,md}\"",
+    "format": "prettier --wr¢ite \"**/*.{js,css,scss,md}\"",
     "lint": "eslint \"src/\" --cache --fix --format table"
   },
   "dependencies": {
+    "axios": "^0.20.0",
     "node-sass": "^4.14.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
@@ -24,6 +25,7 @@
     "@testing-library/react": "^11.0.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.3.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "eslint": "^7.8.1",
     "eslint-config-airbnb": "^18.2.0",

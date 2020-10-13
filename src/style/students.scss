@@ -1,0 +1,15 @@
+@import '_variables';
+.main-list{
+  display: flex;
+  flex-flow: row wrap;
+  .student{
+    background-color: $light-gray;
+    font-weight: bold;
+    padding: 2px;
+    text-align: center;
+    margin: 5px 10px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
