@@ -1,12 +1,18 @@
 @import '_variables';
 
+.student-list {
+  padding-left: 20px;
+  h2 {
+    font-size: 1.3 * $base-font-size;
+  }
+}
+
 .main-list {
   display: flex;
   flex-flow: row wrap;
 
   .student {
     background-color: $light-gray;
-    font-weight: bold;
     padding: 2px;
     text-align: center;
     margin: 5px 10px;

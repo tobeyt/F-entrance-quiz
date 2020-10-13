@@ -41,7 +41,7 @@ class Groups extends React.Component {
 
   render() {
     return (
-      <section>
+      <section className="groups">
         <header className="header">
           <h2>分组列表</h2>
           <button className="random-group" onClick={() => this.randomGroups()}>
