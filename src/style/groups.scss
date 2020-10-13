@@ -1,0 +1,49 @@
+@import 'variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  .random-group {
+    background-color: $primary-color;
+    border-style: none;
+    color: white;
+    padding: 0 30px;
+    height: 40px;
+    margin: 10px;
+  }
+}
+
+.group {
+  border-style: solid;
+  border-color: $gray;
+  border-width: 1px;
+  margin: 10px 0;
+
+  .group-name {
+    background-color: $gray;
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+    font-size: $base-font-size;
+    margin: 0;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .group-content {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    .student {
+      background-color: $light-gray;
+      width: 100px;
+      height: 30px;
+      margin: 5px 10px;
+      text-align: center;
+      padding: 2px;
+      font-weight: bold;
+      line-height: 30px;
+    }
+  }
+}
