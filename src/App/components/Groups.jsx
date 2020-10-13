@@ -11,12 +11,12 @@ class Groups extends React.Component {
     axios.get('http://localhost:8080/groups').then((res) =>
       this.setState({
         groups: {
-          group1: res.data['1 组'],
-          group2: res.data['2 组'],
-          group3: res.data['3 组'],
-          group4: res.data['4 组'],
-          group5: res.data['5 组'],
-          group6: res.data['6 组'],
+          group1: res.data['1 组'].sort((a, b) => a.id - b.id),
+          group2: res.data['2 组'].sort((a, b) => a.id - b.id),
+          group3: res.data['3 组'].sort((a, b) => a.id - b.id),
+          group4: res.data['4 组'].sort((a, b) => a.id - b.id),
+          group5: res.data['5 组'].sort((a, b) => a.id - b.id),
+          group6: res.data['6 组'].sort((a, b) => a.id - b.id),
         },
       })
     );
@@ -24,18 +24,16 @@ class Groups extends React.Component {
 
   randomGroups = () => {
     axios.get('http://localhost:8080/random').then((res) => {
-      console.log(res);
       this.setState({
         groups: {
-          group1: res.data['1 组'],
-          group2: res.data['2 组'],
-          group3: res.data['3 组'],
-          group4: res.data['4 组'],
-          group5: res.data['5 组'],
-          group6: res.data['6 组'],
+          group1: res.data['1 组'].sort((a, b) => a.id - b.id),
+          group2: res.data['2 组'].sort((a, b) => a.id - b.id),
+          group3: res.data['3 组'].sort((a, b) => a.id - b.id),
+          group4: res.data['4 组'].sort((a, b) => a.id - b.id),
+          group5: res.data['5 组'].sort((a, b) => a.id - b.id),
+          group6: res.data['6 组'].sort((a, b) => a.id - b.id),
         },
       });
-      console.log(this.state.groups);
     });
   };
 
