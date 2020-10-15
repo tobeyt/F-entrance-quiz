@@ -4,13 +4,16 @@ import '../../style/groups.scss';
 
 class Groups extends React.Component {
   state = {
+    // TODO 分组组数和内容倾向后端返回而不是写死在前端
     groups: { group1: [], group2: [], group3: [], group4: [], group5: [], group6: [] },
   };
 
   componentDidMount() {
+    // TODO api请求可以抽出api层，如建立src/utils/api这样把请求相关内容都放进去
     axios.get('http://localhost:8080/groups').then((res) =>
       this.setState({
         groups: {
+          // TODO sort 内function抽象成一个compare方法，或者后端处理返回得到的就是需要展示的内容，前端不做排序处理（这个需求好像是扩展的）
           group1: res.data['1 组'].sort((a, b) => a.id - b.id),
           group2: res.data['2 组'].sort((a, b) => a.id - b.id),
           group3: res.data['3 组'].sort((a, b) => a.id - b.id),
@@ -23,7 +26,9 @@ class Groups extends React.Component {
   }
 
   randomGroups = () => {
+    // TODO 同上
     axios.get('http://localhost:8080/random').then((res) => {
+      // TODO 重复代码需要抽象成方法
       this.setState({
         groups: {
           group1: res.data['1 组'].sort((a, b) => a.id - b.id),
@@ -40,6 +45,7 @@ class Groups extends React.Component {
   render() {
     return (
       <section className="groups">
+        {/* TODO header这一块可以单独抽取成组件 */}
         <header className="header">
           <h2>分组列表</h2>
           <button className="random-group" onClick={() => this.randomGroups()}>
@@ -47,6 +53,8 @@ class Groups extends React.Component {
           </button>
         </header>
         <main>
+          {/* TODO 同上，还是倾向于后端返回组数来进行展示，而不是前端写死 */}
+          {/* TODO 优化抽取组件，里面还可以进一步抽取组件和复用，现在这个组件过长了 */}
           <div className="group">
             <h3 className="group-name">1 组</h3>
             <div className="group-content">

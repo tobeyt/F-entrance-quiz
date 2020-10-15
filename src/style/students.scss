@@ -11,6 +11,7 @@
   display: flex;
   flex-flow: row wrap;
 
+  // TODO 这个.student样式和groups.scss中样式重复，考虑复用样式，或将这一块单独抽取为组件
   .student {
     background-color: $light-gray;
     padding: 2px;

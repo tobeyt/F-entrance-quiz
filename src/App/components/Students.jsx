@@ -6,6 +6,7 @@ import '../../style/students.scss';
 class Students extends React.Component {
   state = {
     students: [],
+    // TODO 这个name是否可以省略？
     name: '',
     inputDisplay: false,
   };
@@ -22,6 +23,7 @@ class Students extends React.Component {
     });
   };
 
+  // TODO 是否可以省略？
   handleInputChange = (e) => {
     this.setState({ name: e.target.value });
   };
@@ -43,12 +45,16 @@ class Students extends React.Component {
   };
 
   render() {
+    // TODO 这个按钮可以单独抽出成一个组件
     const addStudent = () => {
+      // TODO 这里使用三元判断优化写法
       if (this.state.inputDisplay) {
         return (
+          // TODO 这里要是做的完备的话，需要点击后自动focus
           <input
             className="add-student-input"
             value={this.state.name}
+            // TODO 同理，这个也可以省略
             onChange={(e) => this.handleInputChange(e)}
             onKeyUp={() => this.addNewStudent(event.keyCode)}
           />
